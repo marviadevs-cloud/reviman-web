@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reviman – Mantenimiento integral del coche | App para Android e iPhone</title>
+  <meta name="description" content="Reviman: todo lo que le pasa a tu coche, en un solo diario. Escanea tickets con la cámara, lee los kilómetros con una foto, recibe avisos de mantenimiento y controla cuánto te cuesta tu coche. Tus datos son tuyos.">
+  <meta name="theme-color" content="#1E4FD8">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <!-- Open Graph (vista previa al compartir en WhatsApp, redes, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Reviman – Todo lo que le pasa a tu coche, en un solo diario">
+  <meta property="og:description" content="Gastos, tickets, kilómetros y mantenimiento de tus vehículos en una app sencilla. Para Android e iPhone.">
+  <meta property="og:image" content="img/revi.svg">
+  <meta property="og:locale" content="es_ES">
+
+  <!-- Tipografías (ver README: se pueden alojar en el propio NAS) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<a class="saltar" href="#principal">Saltar al contenido</a>
+
+<!-- ============ CABECERA ============ -->
+<header class="cabecera" id="cabecera">
+  <div class="contenedor">
+    <a href="#" class="logo" aria-label="Reviman, inicio">
+      <img src="img/revi.svg" alt="" width="40" height="35">
+      <span>reviman<span class="punto">.</span></span>
+    </a>
+    <button class="boton-menu" id="botonMenu" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav aria-label="Principal">
+      <ul class="menu" id="menu">
+        <li><a href="#como-funciona">Cómo funciona</a></li>
+        <li><a href="#funciones">Funciones</a></li>
+        <li><a href="#demo">Pruébalo</a></li>
+        <li><a href="#tus-datos">Tus datos</a></li>
+        <li><a href="#preguntas">Preguntas</a></li>
+        <li><a href="#descargar" class="btn btn-primario">Descargar gratis</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="principal">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="contenedor">
+    <div class="aparecer">
+      <span class="etiqueta"><span class="piloto"></span> <span data-estado-texto>Próximamente en Android e iPhone</span></span>
+      <h1>Todo lo que le pasa a tu coche, <span class="resalte">en un solo diario.</span></h1>
+      <p class="entradilla">Reviman guarda tus repostajes, revisiones, ITV y tickets, te avisa antes de cada mantenimiento y te dice cuánto te cuesta realmente tu coche. Con una foto. Sin complicaciones.</p>
+      <div class="acciones">
+        <a href="#descargar" class="btn btn-primario">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg>
+          Descargar gratis
+        </a>
+        <a href="#como-funciona" class="btn btn-secundario">Ver cómo funciona</a>
+      </div>
+      <ul class="ventajas-rapidas">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg> Gratis</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg> Funciona sin conexión</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg> Sin registros ni cuentas</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg> Tus datos son tuyos</li>
+      </ul>
+    </div>
+
+    <div class="escena aparecer" aria-hidden="true">
+      <div class="flotante f1">
+        <div class="circ" style="background:#FFF1E5">🔔</div>
+        <div><b>Cambio de aceite</b><small>Dentro de 1.770 km</small></div>
+      </div>
+      <div class="telefono">
+        <div class="isla"></div>
+        <div class="pantalla">
+          <div class="app-barra"><span>9:41</span><span>●●● 5G</span></div>
+          <div class="app-cab"><h4>Mi garaje</h4><div class="avatar">M</div></div>
+          <div class="app-tarjeta">
+            <div class="fila">
+              <div><div class="modelo">Seat León 1.5 TSI</div><div class="matricula">1234 LMN · Gasolina</div></div>
+              <span>🚗</span>
+            </div>
+            <div class="km">84.230 <span>km</span></div>
+            <div class="app-aviso">🔧 Aceite y filtro en 1.770 km</div>
+          </div>
+          <div class="app-mini">
+            <div><small>Gasto del mes</small><b>142,60 €</b></div>
+            <div><small>Consumo medio</small><b>6,1 L</b></div>
+          </div>
+          <div class="app-titulo">Diario</div>
+          <ul class="app-diario">
+            <li><span class="ico" style="background:#E8EEFF">⛽</span><span class="txt"><b>Repostaje</b><small>12 nov · 34,1 L</small></span><span class="imp">52,30 €</span></li>
+            <li><span class="ico" style="background:#E6F6EF">✅</span><span class="txt"><b>ITV favorable</b><small>3 nov · Próxima en 2028</small></span><span class="imp">39,90 €</span></li>
+            <li><span class="ico" style="background:#FFF1E5">🅿️</span><span class="txt"><b>Parking centro</b><small>28 oct · Ticket guardado</small></span><span class="imp">6,40 €</span></li>
+          </ul>
+          <div class="app-fab">＋</div>
+          <div class="app-nav">
+            <span class="act"><i>🏠</i>Inicio</span><span><i>📖</i>Diario</span><span><i>🔧</i>Taller</span><span><i>📊</i>Datos</span>
+          </div>
+        </div>
+      </div>
+      <div class="flotante f2">
+        <div class="circ" style="background:#E6F6EF">📸</div>
+        <div><b>Ticket leído</b><small>52,30 € · 34,12 L</small></div>
+      </div>
+      <img class="revi-hero" src="img/revi.svg" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEMA ============ -->
+<section class="problema">
+  <div class="contenedor">
+    <div class="titulo-seccion aparecer">
+      <span class="antetitulo">¿Te suena?</span>
+      <h2>Tu coche te cuesta más de lo que crees… y no sabes cuánto</h2>
+    </div>
+    <div class="dolores">
+      <article class="dolor aparecer">
+        <div class="emoji">🧾</div>
+        <h3>Tickets por todas partes</h3>
+        <p>En la guantera, en la cartera, en el correo… y cuando los necesitas, nunca aparecen.</p>
+      </article>
+      <article class="dolor aparecer">
+        <div class="emoji">🤔</div>
+        <h3>“¿Cuándo cambié el aceite?”</h3>
+        <p>La pegatina del taller se borró y el libro de mantenimiento lleva años sin sellar.</p>
+      </article>
+      <article class="dolor aparecer">
+        <div class="emoji">⏰</div>
+        <h3>Sustos de última hora</h3>
+        <p>La ITV caducada, las pastillas al límite o la correa de distribución que se pasó de kilómetros.</p>
+      </article>
+    </div>
+    <p class="solucion-frase aparecer">Con Reviman, <span>todo queda anotado solo</span> y la app se acuerda por ti.</p>
+  </div>
+</section>
+
+<!-- ============ CÓMO FUNCIONA ============ -->
+<section id="como-funciona">
+  <div class="contenedor">
+    <div class="titulo-seccion aparecer">
+      <span class="antetitulo">Cómo funciona</span>
+      <h2>Empieza en menos de <span class="resalte">un minuto</span></h2>
+      <p>Sin formularios eternos ni cuentas que crear. Tres pasos y listo.</p>
+    </div>
+    <div class="pasos">
+      <article class="paso aparecer">
+        <div class="num">1</div>
+        <h3>Añade tu coche</h3>
+        <p>Elige marca, modelo, año y motor, e indica los kilómetros. Reviman prepara automáticamente su plan de mantenimiento.</p>
+        <span class="tiempo">⏱ 30 segundos</span>
+      </article>
+      <article class="paso aparecer">
+        <div class="num">2</div>
+        <h3>Haz una foto</h3>
+        <p>Al ticket de la gasolinera o del taller, o al cuentakilómetros. La app lee los datos y tú solo confirmas.</p>
+        <span class="tiempo">⏱ 3 toques</span>
+      </article>
+      <article class="paso aparecer">
+        <div class="num">3</div>
+        <h3>Olvídate</h3>
+        <p>Reviman te avisa antes de cada revisión, cambio de aceite o ITV, y te enseña en qué se va tu dinero.</p>
+        <span class="tiempo">🔔 Avisos automáticos</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FUNCIONES ============ -->
+<section class="funciones" id="funciones">
+  <div class="contenedor">
+    <div class="titulo-seccion aparecer">
+      <span class="antetitulo">Funciones</span>
+      <h2>Todo el mantenimiento de tu coche, <span class="resalte">en tu bolsillo</span></h2>
+      <p>Pensada para usarse en el surtidor, en el taller o en el sofá. Rápida, clara y sin letra pequeña.</p>
+    </div>
+    <div class="rejilla">
+      <article class="funcion destacada aparecer">
+        <div>
+          <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-1.5zM4 19.5A2 2 0 0 1 6 18h12"/><path d="M8 7h6M8 11h4"/></svg></div>
+          <h3>El diario de tu coche</h3>
+          <p>Cada repostaje, revisión, avería, ITV o ticket queda guardado en orden, como un diario. Su historia completa, siempre a mano… y perfecta para enseñarla si algún día lo vendes.</p>
+        </div>
+        <ul class="lista-check">
+          <li>⛽ Repostajes con litros y €/litro</li>
+          <li>🔧 Revisiones y reparaciones</li>
+          <li>🛡️ Seguro, impuestos e ITV</li>
+          <li>🅿️ Parking, peajes y lavados</li>
+        </ul>
+      </article>
+      <article class="funcion aparecer">
+        <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 9h10M7 13h10M7 17h6"/></svg></div>
+        <h3>Escanea tus tickets</h3>
+        <p>Haz una foto y Reviman detecta fecha, importe, litros, precio por litro y establecimiento. La imagen del ticket se guarda con el gasto.</p>
+      </article>
+      <article class="funcion aparecer">
+        <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15a9 9 0 0 1 18 0"/><path d="m12 15 4-5"/><circle cx="12" cy="15" r="1.5"/><path d="M5 19h14"/></svg></div>
+        <h3>Kilómetros con una foto</h3>
+        <p>Fotografía el cuadro de instrumentos y la app lee el cuentakilómetros total. Ignora el parcial, la hora y la temperatura. ¿No cuadra? Lo escribes tú.</p>
+      </article>
+      <article class="funcion aparecer">
+        <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div>
+        <h3>Plan de mantenimiento</h3>
+        <p>Aceite, filtros, frenos, neumáticos, distribución, ITV… con intervalos por kilómetros y por tiempo según tu modelo y motor. Y si tu taller dice otra cosa, lo ajustas.</p>
+      </article>
+      <article class="funcion aparecer">
+        <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
+        <h3>Estadísticas claras</h3>
+        <p>Gasto mensual y anual, consumo medio (L/100 km), coste por kilómetro y desglose por categoría, en gráficos fáciles de entender.</p>
+      </article>
+      <article class="funcion aparecer">
+        <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M6 17l1.5-5h9L18 17"/><circle cx="8" cy="19" r="1.5"/><circle cx="16" cy="19" r="1.5"/><path d="M3 10l9-6 9 6"/></svg></div>
+        <h3>Todos tus vehículos</h3>
+        <p>Coche, moto, furgoneta o el coche de la familia: cada uno con su tarjeta, sus kilómetros y su próximo mantenimiento.</p>
+      </article>
+      <article class="funcion aparecer">
+        <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16 14.2a5 5 0 0 1 6 4.8"/></svg></div>
+        <h3>Garaje compartido <span class="chip">Muy pronto</span></h3>
+        <p>¿Usáis el mismo coche en casa? Compartid el garaje entre Android e iPhone y que cada uno apunte lo suyo.</p>
+      </article>
+      <article class="funcion aparecer">
+        <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M12 18v-6m0 6-2.5-2.5M12 18l2.5-2.5"/></svg></div>
+        <h3>Exporta cuando quieras</h3>
+        <p>Descarga tu historial en CSV o PDF y haz copias de seguridad automáticas. Tus datos nunca quedan atrapados.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEMO INTERACTIVA ============ -->
+<section class="demo" id="demo">
+  <div class="contenedor">
+    <div class="demo-textos aparecer">
+      <span class="antetitulo">Pruébalo aquí</span>
+      <h2>Una foto. Todos los datos.</h2>
+      <p>La lectura se hace en tu propio móvil: la foto no sale del dispositivo. Pulsa el botón y mira cómo trabaja Reviman.</p>
+      <div class="pestanas" role="tablist" aria-label="Tipo de foto">
+        <button role="tab" aria-selected="true" aria-controls="visor" id="tabTicket">🧾 Ticket</button>
+        <button role="tab" aria-selected="false" aria-controls="visor" id="tabKm">🚗 Cuentakilómetros</button>
+      </div>
+      <div class="campos" id="campos" aria-live="polite"></div>
+      <button class="btn btn-primario" id="botonEscanear">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8V6a2 2 0 0 1 2-2h2l2-2h6l2 2h2a2 2 0 0 1 2 2v2"/><circle cx="12" cy="13" r="4"/><path d="M3 12v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6"/></svg>
+        <span>Escanear ticket</span>
+      </button>
+    </div>
+    <div class="visor aparecer" id="visor" role="tabpanel" aria-label="Simulación de la cámara">
+      <div class="marco-guia"></div>
+      <div class="linea-escaneo"></div>
+      <div class="ticket" id="ticket">
+        <div class="c"><b>ESTACIÓN SERVICIO<br>LOS OLIVOS</b><br>CIF B12345678</div>
+        <hr>
+        <div class="r"><span>Fecha:</span><mark>12/11/2026</mark></div>
+        <div class="r"><span>Hora:</span><span>08:17</span></div>
+        <hr>
+        <div class="r"><span>SP95 Surt. 4</span><span></span></div>
+        <div class="r"><span>Litros:</span><mark>34,12 L</mark></div>
+        <div class="r"><span>Precio:</span><mark>1,533 €/L</mark></div>
+        <hr>
+        <div class="r"><b>TOTAL</b><b><mark>52,30 €</mark></b></div>
+        <div class="r"><span>IVA 21% incl.</span><span>9,08 €</span></div>
+        <hr>
+        <div class="c">¡Gracias por su visita!</div>
+      </div>
+      <div class="cuadro oculto" id="cuadro">
+        <div class="marcas">0 40 80 120 160</div>
+        <div class="aguja"></div>
+        <div class="lcd">
+          <div class="r"><mark class="no">14:32</mark><mark class="no">12°C</mark></div>
+          <div class="r"><span>TRIP</span><mark class="no">312.4</mark></div>
+          <div class="odo"><small style="font-size:12px;letter-spacing:0">ODO </small><mark class="si">84230</mark> <small style="font-size:12px;letter-spacing:0">km</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MANTENIMIENTO ============ -->
+<section class="mantenimiento">
+  <div class="contenedor mant-grid">
+    <div class="plan aparecer" id="plan" aria-label="Ejemplo de plan de mantenimiento">
+      <div class="plan-item"><span class="ico">🛢️</span><div><b>Aceite y filtro</b><small>Cada 15.000 km o 1 año</small><div class="barra"><i data-ancho="88" style="background:var(--naranja)"></i></div></div><span class="estado pronto">1.770 km</span></div>
+      <div class="plan-item"><span class="ico">🛞</span><div><b>Neumáticos</b><small>Revisar cada 10.000 km</small><div class="barra"><i data-ancho="45" style="background:var(--verde)"></i></div></div><span class="estado ok">Al día</span></div>
+      <div class="plan-item"><span class="ico">🛑</span><div><b>Pastillas de freno</b><small>Cada 30.000 km</small><div class="barra"><i data-ancho="60" style="background:var(--verde)"></i></div></div><span class="estado ok">Al día</span></div>
+      <div class="plan-item"><span class="ico">⚙️</span><div><b>Correa de distribución</b><small>Cada 120.000 km o 6 años</small><div class="barra"><i data-ancho="70" style="background:var(--verde)"></i></div></div><span class="estado ok">35.770 km</span></div>
+      <div class="plan-item"><span class="ico">📋</span><div><b>ITV</b><small>Favorable el 03/11/2026</small><div class="barra"><i data-ancho="5" style="background:var(--verde)"></i></div></div><span class="estado ok">2028</span></div>
+    </div>
+    <div class="mant-textos aparecer">
+      <span class="antetitulo">Mantenimiento inteligente</span>
+      <h2>Tu coche te avisa antes de que algo falle</h2>
+      <p>Reviman conoce tu modelo y tu motor y prepara un plan de mantenimiento a medida. Cada vez que repostas o actualizas los kilómetros, recalcula qué toca y cuándo.</p>
+      <ul class="puntos">
+        <li><span class="bola">1</span><div><b>Plan según tu modelo</b><span>Gasolina, diésel, híbrido o eléctrico: cada motor tiene sus necesidades.</span></div></li>
+        <li><span class="bola">2</span><div><b>Por kilómetros y por tiempo</b><span>Lo que llegue antes. Así no se te pasa nada aunque uses poco el coche.</span></div></li>
+        <li><span class="bola">3</span><div><b>Tú tienes la última palabra</b><span>¿Tu libro de mantenimiento dice otra cosa? Ajusta cualquier intervalo en dos toques.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CALCULADORA ============ -->
+<section id="calculadora">
+  <div class="contenedor">
+    <div class="titulo-seccion aparecer">
+      <span class="antetitulo">Calculadora</span>
+      <h2>¿Cuánto te cuesta <span class="resalte">de verdad</span> tu coche?</h2>
+      <p>Haz una estimación rápida. Reviman lo calcula solo, con tus datos reales, cada mes.</p>
+    </div>
+    <div class="calc-caja aparecer">
+      <form class="calc-form" id="calc" onsubmit="return false">
+        <label>Combustible al mes<div class="entrada"><input type="number" inputmode="decimal" min="0" step="1" id="cCombustible" value="120"><span>€/mes</span></div></label>
+        <label>Kilómetros al año<div class="entrada"><input type="number" inputmode="numeric" min="1" step="500" id="cKm" value="15000"><span>km</span></div></label>
+        <label>Seguro<div class="entrada"><input type="number" inputmode="decimal" min="0" step="10" id="cSeguro" value="450"><span>€/año</span></div></label>
+        <label>Impuesto de circulación<div class="entrada"><input type="number" inputmode="decimal" min="0" step="5" id="cImpuesto" value="110"><span>€/año</span></div></label>
+        <label>Mantenimiento y reparaciones<div class="entrada"><input type="number" inputmode="decimal" min="0" step="10" id="cMant" value="400"><span>€/año</span></div></label>
+        <label>Parking, peajes, ITV y otros<div class="entrada"><input type="number" inputmode="decimal" min="0" step="10" id="cOtros" value="200"><span>€/año</span></div></label>
+      </form>
+      <div class="calc-res" aria-live="polite">
+        <div>
+          <div class="etq">Tu coche te cuesta al año</div>
+          <div class="grande" id="rAnual">2.600 <small>€</small></div>
+        </div>
+        <div class="dos">
+          <div><span class="etq">Al mes</span><b id="rMes">217 €</b></div>
+          <div><span class="etq">Por km</span><b id="rKm">0,17 €</b></div>
+        </div>
+        <p class="nota">Sin contar la compra ni la depreciación del vehículo.</p>
+        <img src="img/revi.svg" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TUS DATOS ============ -->
+<section class="datos" id="tus-datos">
+  <div class="contenedor">
+    <div class="titulo-seccion aparecer">
+      <span class="antetitulo">Privacidad</span>
+      <h2>Tus datos son <span class="resalte">tuyos</span>. Punto.</h2>
+      <p>Reviman no tiene servidores que guarden tu información. Tú eliges dónde vive tu diario.</p>
+    </div>
+    <div class="opciones-datos">
+      <article class="opcion aparecer">
+        <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg></div>
+        <h3>En tu móvil</h3>
+        <p>Todo se guarda en el propio dispositivo. Funciona sin conexión, en el garaje o en mitad del monte.</p>
+      </article>
+      <article class="opcion aparecer">
+        <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8l6 10-4 7H6l-4-7z"/><path d="M8 3l6 10H2M16 3l-6 10 4 7"/></svg></div>
+        <h3>En tu Google Drive</h3>
+        <p>Una carpeta “Reviman” en tu propio Drive. Ideal si en casa hay Android e iPhone.</p>
+      </article>
+      <article class="opcion aparecer">
+        <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H7a5 5 0 1 1 1-9.9A6 6 0 0 1 19.4 11 4 4 0 0 1 17.5 19z"/></svg></div>
+        <h3>En tu iCloud</h3>
+        <p>Para usuarios de iPhone: tu diario aparece en la app Archivos, como cualquier otro documento tuyo.</p>
+      </article>
+    </div>
+    <ul class="compromisos aparecer">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg> Las fotos se leen en tu móvil</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg> Sin crear cuentas</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg> No vendemos tus datos</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg> Exportación libre en CSV y PDF</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ PARA QUIÉN ============ -->
+<section id="para-quien">
+  <div class="contenedor">
+    <div class="titulo-seccion aparecer">
+      <span class="antetitulo">Para quién</span>
+      <h2>Hecha para cualquiera que tenga un coche</h2>
+      <p>No hace falta saber de mecánica. Reviman te lo explica todo claro.</p>
+    </div>
+    <div class="perfiles">
+      <article class="perfil aparecer"><div class="emoji">🏡</div><h3>Familias</h3><p>Dos coches, varios conductores y un único sitio para saber qué toca a cada uno.</p></article>
+      <article class="perfil aparecer"><div class="emoji">🛣️</div><h3>Los que hacen muchos km</h3><p>Controla el consumo real y que ningún mantenimiento se pase de kilómetros.</p></article>
+      <article class="perfil aparecer"><div class="emoji">💼</div><h3>Autónomos</h3><p>Tickets organizados y exportables para justificar gastos sin perder ni uno.</p></article>
+      <article class="perfil aparecer"><div class="emoji">🔑</div><h3>Quien piensa vender</h3><p>Un historial completo y documentado da confianza al comprador y vale dinero.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PREGUNTAS ============ -->
+<section class="faq" id="preguntas">
+  <div class="contenedor">
+    <div class="titulo-seccion aparecer">
+      <span class="antetitulo">Preguntas frecuentes</span>
+      <h2>Lo que nos suelen preguntar</h2>
+    </div>
+    <div class="preguntas aparecer">
+      <details>
+        <summary>¿Cuándo puedo descargar Reviman?</summary>
+        <p data-estado-faq>Reviman está en la recta final de desarrollo y llegará pronto a Google Play y App Store. Deja tu correo en la sección de descarga y te avisaremos el primer día.</p>
+      </details>
+      <details>
+        <summary>¿Es gratis?</summary>
+        <p>Sí. Reviman se descarga gratis e incluye todas las funciones principales: diario, escaneo de tickets, kilómetros por foto, plan de mantenimiento, avisos y estadísticas.</p>
+      </details>
+      <details>
+        <summary>¿Dónde se guardan mis datos? ¿Los veis vosotros?</summary>
+        <p>No. Tú eliges: en tu móvil, en tu Google Drive o en tu iCloud. Reviman no tiene servidores propios con tu información, y la lectura de fotos de tickets y del cuentakilómetros se hace en tu propio dispositivo.</p>
+      </details>
+      <details>
+        <summary>¿Necesito conexión a internet?</summary>
+        <p>No. La app funciona completamente sin conexión. Si guardas tus datos en Google Drive o iCloud, se sincronizan cuando vuelve la cobertura.</p>
+      </details>
+      <details>
+        <summary>¿Sirve para mi coche?</summary>
+        <p>Sí: gasolina, diésel, híbrido o eléctrico, y también motos y furgonetas. Para los modelos más vendidos en España incluimos planes de mantenimiento específicos; para el resto, uno según el tipo de motor que puedes ajustar a tu libro de mantenimiento.</p>
+      </details>
+      <details>
+        <summary>¿Y si la foto no lee bien los kilómetros o el ticket?</summary>
+        <p>Siempre verás los datos antes de guardarlos y podrás corregirlos con un toque. Y si lo prefieres, puedes escribirlo todo a mano en tres toques.</p>
+      </details>
+      <details>
+        <summary>¿Podemos usarla dos personas con el mismo coche?</summary>
+        <p>Es una de las próximas funciones: el garaje compartido permitirá que, por ejemplo, una persona con Android y otra con iPhone anoten en el mismo diario, sincronizado a través de Google Drive.</p>
+      </details>
+      <details>
+        <summary>¿Puedo llevarme mis datos?</summary>
+        <p>Siempre. Exporta tu historial en CSV (para Excel) o en PDF cuando quieras, y la app hace copias de seguridad automáticas.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="cta" id="descargar">
+  <div class="contenedor">
+    <div class="cta-caja aparecer">
+      <div>
+        <h2>Dale a tu coche el diario que se merece</h2>
+        <p>Descarga Reviman gratis y empieza hoy a tener su mantenimiento y sus gastos bajo control.</p>
+        <div class="acciones">
+          <a class="btn btn-tienda" id="enlaceGooglePlay" href="#">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2.5v19a.8.8 0 0 0 1.2.7l16.2-9.5a.8.8 0 0 0 0-1.4L5.2 1.8A.8.8 0 0 0 4 2.5z" opacity=".95"/></svg>
+            <span><small data-tienda-sub>Próximamente en</small><strong>Google Play</strong></span>
+          </a>
+          <a class="btn btn-tienda" id="enlaceAppStore" href="#">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+            <span><small data-tienda-sub>Próximamente en</small><strong>App Store</strong></span>
+          </a>
+        </div>
+        <p class="aviso-lanzamiento" id="avisoLanzamiento">¿Quieres que te avisemos el día del lanzamiento? <a id="enlaceAviso" href="#">Escríbenos y te avisamos</a>.</p>
+      </div>
+      <img src="img/revi.svg" alt="Revi, la mascota de Reviman, sonriendo">
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ PIE ============ -->
+<footer class="pie">
+  <div class="contenedor">
+    <a href="#" class="logo" style="font-size:20px"><img src="img/revi.svg" alt="" width="32" style="width:32px"><span>reviman<span class="punto">.</span></span></a>
+    <nav aria-label="Pie de página">
+      <a href="#funciones">Funciones</a>
+      <a href="#preguntas">Preguntas</a>
+      <a href="privacidad.html">Privacidad</a>
+      <a href="privacidad.html#aviso-legal">Aviso legal</a>
+      <a id="enlaceContacto" href="#">Contacto</a>
+    </nav>
+    <span>© <span id="anio">2026</span> Reviman · Hecho en España 🇪🇸</span>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

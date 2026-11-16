@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 190" role="img" aria-label="Revi, la mascota de Reviman">
+  <!-- antena con piloto -->
+  <line x1="110" y1="34" x2="110" y2="12" stroke="#0E1726" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="110" cy="10" r="8" fill="#FF8A2A"/>
+  <circle cx="107" cy="7" r="2.5" fill="#fff" opacity=".8"/>
+  <!-- retrovisores-orejas -->
+  <rect x="18" y="62" width="34" height="20" rx="9" fill="#FF8A2A" transform="rotate(-14 35 72)"/>
+  <rect x="168" y="62" width="34" height="20" rx="9" fill="#FF8A2A" transform="rotate(14 185 72)"/>
+  <!-- ruedas -->
+  <rect x="38" y="150" width="34" height="32" rx="10" fill="#0E1726"/>
+  <rect x="148" y="150" width="34" height="32" rx="10" fill="#0E1726"/>
+  <!-- cabina -->
+  <path d="M62 36 h96 a14 14 0 0 1 13 9 l14 42 H35 l14 -42 a14 14 0 0 1 13 -9z" fill="#1E4FD8"/>
+  <path d="M68 46 h84 a8 8 0 0 1 7.5 5.5 l9 28 H51.5 l9 -28 A8 8 0 0 1 68 46z" fill="#BFD3FF"/>
+  <path d="M74 52 l-10 24" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+  <!-- carrocería -->
+  <rect x="24" y="82" width="172" height="76" rx="26" fill="#1E4FD8"/>
+  <rect x="24" y="82" width="172" height="20" rx="10" fill="#2F60EA"/>
+  <!-- faros-ojos -->
+  <circle cx="66" cy="118" r="22" fill="#fff"/>
+  <circle cx="154" cy="118" r="22" fill="#fff"/>
+  <circle cx="71" cy="120" r="10" fill="#0E1726"/>
+  <circle cx="149" cy="120" r="10" fill="#0E1726"/>
+  <circle cx="74" cy="116" r="3.5" fill="#fff"/>
+  <circle cx="152" cy="116" r="3.5" fill="#fff"/>
+  <!-- sonrisa / parrilla -->
+  <path d="M92 134 q18 14 36 0" stroke="#0E1726" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- paragolpes -->
+  <rect x="40" y="146" width="140" height="8" rx="4" fill="#163FB0"/>
+</svg>
