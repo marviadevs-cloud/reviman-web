@@ -42,7 +42,8 @@
         <li><a href="#demo">Pruébalo</a></li>
         <li><a href="#tus-datos">Tus datos</a></li>
         <li><a href="#preguntas">Preguntas</a></li>
-        <li><a href="#descargar" class="btn btn-primario">Descargar gratis</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#descargar" class="btn btn-primario" data-cta><span data-cta-texto>Descargar gratis</span></a></li>
       </ul>
     </nav>
   </div>
@@ -58,9 +59,9 @@
       <h1>Todo lo que le pasa a tu coche, <span class="resalte">en un solo diario.</span></h1>
       <p class="entradilla">Reviman guarda tus repostajes, revisiones, ITV y tickets, te avisa antes de cada mantenimiento y te dice cuánto te cuesta realmente tu coche. Con una foto. Sin complicaciones.</p>
       <div class="acciones">
-        <a href="#descargar" class="btn btn-primario">
+        <a href="#descargar" class="btn btn-primario" data-cta>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg>
-          Descargar gratis
+          <span data-cta-texto>Descargar gratis</span>
         </a>
         <a href="#como-funciona" class="btn btn-secundario">Ver cómo funciona</a>
       </div>
@@ -390,6 +391,50 @@
   </div>
 </section>
 
+<!-- ============ PRE-RESERVA ============ -->
+<section class="prereserva" id="prereserva">
+  <div class="contenedor">
+    <div class="pre-caja aparecer">
+      <div class="pre-textos">
+        <span class="antetitulo">Lista de pre-reserva</span>
+        <h2>Apúntate ahora y consigue <span class="resalte" id="textoDescuento">un descuento exclusivo</span> en Reviman sin anuncios</h2>
+        <p>Reviman será gratis. Cuando salga la versión sin publicidad, las personas de esta lista tendrán un precio especial reservado solo para ellas.</p>
+        <ul class="pre-ventajas">
+          <li><span>🏷️</span><div><b>Precio especial reservado</b>Solo para quienes se apunten antes del lanzamiento.</div></li>
+          <li><span>🔔</span><div><b>Te avisamos el primer día</b>Un correo cuando Reviman esté en tu tienda de apps.</div></li>
+          <li><span>🤝</span><div><b>Sin compromiso</b>No pagas nada ahora y puedes borrarte cuando quieras.</div></li>
+        </ul>
+      </div>
+
+      <form class="pre-form" id="formPreReserva" action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <input type="checkbox" name="botcheck" class="trampa" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <h3>Reserva tu plaza</h3>
+        <label>Correo electrónico
+          <input type="email" name="email" id="pEmail" autocomplete="email" required maxlength="120" placeholder="tucorreo@ejemplo.com">
+          <span class="error" aria-live="polite"></span>
+        </label>
+        <label><span>Nombre <small>(opcional)</small></span>
+          <input type="text" name="nombre" id="pNombre" autocomplete="given-name" maxlength="80" placeholder="¿Cómo te llamas?">
+        </label>
+        <fieldset class="plataformas">
+          <legend>Tu móvil</legend>
+          <label><input type="radio" name="plataforma" value="Android" checked><span>🤖 Android</span></label>
+          <label><input type="radio" name="plataforma" value="iPhone"><span>🍏 iPhone</span></label>
+          <label><input type="radio" name="plataforma" value="Ambos"><span>Los dos</span></label>
+        </fieldset>
+        <label class="check">
+          <input type="checkbox" id="pConsentimiento" required>
+          <span>Quiero entrar en la lista de pre-reserva y recibir por correo el aviso del lanzamiento y la oferta. He leído la <a href="privacidad.html#prereserva" target="_blank">política de privacidad</a>.</span>
+        </label>
+        <span class="error" id="errorConsentimiento" aria-live="polite"></span>
+        <button type="submit" class="btn btn-naranja" id="botonPreReserva"><span>Reservar mi descuento</span></button>
+        <p class="pre-nota">Solo te escribiremos para esto. Nada de spam.</p>
+        <div class="resultado" id="resultadoPreReserva" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
 <!-- ============ PREGUNTAS ============ -->
 <section class="faq" id="preguntas">
   <div class="contenedor">
@@ -400,11 +445,15 @@
     <div class="preguntas aparecer">
       <details>
         <summary>¿Cuándo puedo descargar Reviman?</summary>
-        <p data-estado-faq>Reviman está en la recta final de desarrollo y llegará pronto a Google Play y App Store. Deja tu correo en la sección de descarga y te avisaremos el primer día.</p>
+        <p data-estado-faq>Reviman está en la recta final de desarrollo y llegará pronto a Google Play y App Store. Apúntate a la lista de pre-reserva y te avisaremos el primer día.</p>
       </details>
       <details>
         <summary>¿Es gratis?</summary>
         <p>Sí. Reviman se descarga gratis e incluye todas las funciones principales: diario, escaneo de tickets, kilómetros por foto, plan de mantenimiento, avisos y estadísticas.</p>
+      </details>
+      <details>
+        <summary>¿Qué es la lista de pre-reserva?</summary>
+        <p>Es una lista de correo para quienes quieren Reviman desde el primer día. Te avisaremos del lanzamiento y tendrás un precio especial en la versión sin anuncios. Apuntarte es gratis, no te compromete a nada y puedes borrarte cuando quieras.</p>
       </details>
       <details>
         <summary>¿Dónde se guardan mis datos? ¿Los veis vosotros?</summary>
@@ -434,6 +483,61 @@
   </div>
 </section>
 
+<!-- ============ CONTACTO ============ -->
+<section class="contacto" id="contacto">
+  <div class="contenedor contacto-grid">
+    <div class="contacto-textos aparecer">
+      <span class="antetitulo">Contacto</span>
+      <h2>¿Hablamos?</h2>
+      <p>¿Tienes una duda, una idea para la app o quieres colaborar con nosotros? Escríbenos y te responderemos lo antes posible.</p>
+      <ul class="contacto-datos">
+        <li><span class="bola">✉️</span><div><b>Correo</b><a id="correoVisible" href="mailto:info@reviman.es">info@reviman.es</a></div></li>
+        <li><span class="bola">⏱</span><div><b>Respuesta</b><span>Normalmente en 24–48 horas laborables</span></div></li>
+      </ul>
+      <img src="img/revi.svg" alt="" class="contacto-revi">
+    </div>
+
+    <form class="formulario aparecer" id="formContacto" action="https://api.web3forms.com/submit" method="POST" novalidate>
+      <!-- Trampa anti-spam: los humanos no la ven -->
+      <input type="checkbox" name="botcheck" class="trampa" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="fila-2">
+        <label>Nombre
+          <input type="text" name="nombre" id="fNombre" autocomplete="name" required maxlength="80" placeholder="Tu nombre">
+          <span class="error" aria-live="polite"></span>
+        </label>
+        <label>Correo electrónico
+          <input type="email" name="email" id="fEmail" autocomplete="email" required maxlength="120" placeholder="tucorreo@ejemplo.com">
+          <span class="error" aria-live="polite"></span>
+        </label>
+      </div>
+      <label>Motivo
+        <select name="motivo" id="fMotivo">
+          <option>Consulta general</option>
+          <option>Sugerencia para la app</option>
+          <option>Problema o error</option>
+          <option>Prensa o colaboraciones</option>
+          <option>Otro</option>
+        </select>
+      </label>
+      <label>Mensaje
+        <textarea name="mensaje" id="fMensaje" rows="5" required maxlength="3000" placeholder="Cuéntanos…"></textarea>
+        <span class="error" aria-live="polite"></span>
+      </label>
+      <label class="check">
+        <input type="checkbox" id="fPrivacidad" required>
+        <span>He leído y acepto la <a href="privacidad.html" target="_blank">política de privacidad</a>. Usaremos tus datos solo para responderte.</span>
+      </label>
+      <span class="error" id="errorPrivacidad" aria-live="polite"></span>
+      <button type="submit" class="btn btn-primario" id="botonEnviar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg>
+        <span>Enviar mensaje</span>
+      </button>
+      <div class="resultado" id="resultadoFormulario" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
 <!-- ============ CTA FINAL ============ -->
 <section class="cta" id="descargar">
   <div class="contenedor">
@@ -451,7 +555,7 @@
             <span><small data-tienda-sub>Próximamente en</small><strong>App Store</strong></span>
           </a>
         </div>
-        <p class="aviso-lanzamiento" id="avisoLanzamiento">¿Quieres que te avisemos el día del lanzamiento? <a id="enlaceAviso" href="#">Escríbenos y te avisamos</a>.</p>
+        <p class="aviso-lanzamiento" id="avisoLanzamiento">¿Quieres que te avisemos el día del lanzamiento? <a id="enlaceAviso" href="#prereserva">Apúntate a la pre-reserva con descuento</a>.</p>
       </div>
       <img src="img/revi.svg" alt="Revi, la mascota de Reviman, sonriendo">
     </div>
@@ -469,7 +573,7 @@
       <a href="#preguntas">Preguntas</a>
       <a href="privacidad.html">Privacidad</a>
       <a href="privacidad.html#aviso-legal">Aviso legal</a>
-      <a id="enlaceContacto" href="#">Contacto</a>
+      <a href="#contacto">Contacto</a>
     </nav>
     <span>© <span id="anio">2026</span> Reviman · Hecho en España 🇪🇸</span>
   </div>

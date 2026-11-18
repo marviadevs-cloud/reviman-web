@@ -13,5 +13,13 @@ window.REVIMAN_CONFIG = {
 
   // Correo de contacto (y para la lista de aviso del lanzamiento)
   // Correo de contacto definitivo
-  correoContacto: "info@reviman.es"
+  correoContacto: "info@reviman.es",
+
+  // Formularios de contacto y pre-reserva (servicio gratuito Web3Forms, 250 mensajes/mes)
+  // Clave de acceso que Web3Forms envía a info@reviman.es (ver LEEME.md).
+  // Mientras esté vacía, el formulario abre el programa de correo del visitante.
+  web3formsKey: "3844272a-085a-424c-817d-9df847595e15",
+
+  // Descuento de la lista de pre-reserva, p. ej. "50 %". Vacío → "un descuento exclusivo"
+  descuentoPreReserva: ""
 };
