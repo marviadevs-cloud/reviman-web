@@ -8,7 +8,7 @@ window.REVIMAN_CONFIG = {
   estado: "proximamente",
 
   // Enlaces a las tiendas (rellenar cuando la app esté publicada)
-  googlePlay: "https://play.google.com/store/apps/details?id=com.reviman",
+  googlePlay: "https://play.google.com/store/apps/details?id=com.reviman.reviman",
   appStore: "",   // p. ej. "https://apps.apple.com/es/app/reviman/id0000000000"
 
   // Correo de contacto (y para la lista de aviso del lanzamiento)
