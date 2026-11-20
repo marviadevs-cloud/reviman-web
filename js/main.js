@@ -49,6 +49,10 @@
 
   /* ---------- Animaciones al hacer scroll ---------- */
   var reducir = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- Vídeo promocional: sin movimiento automático si se pide ---------- */
+  var videoPromo = $("#videoPromo");
+  if (videoPromo && reducir) { videoPromo.removeAttribute("autoplay"); videoPromo.pause(); videoPromo.setAttribute("controls", ""); }
   if ("IntersectionObserver" in window && !reducir) {
     var io = new IntersectionObserver(function (entradas) {
       entradas.forEach(function (en) {

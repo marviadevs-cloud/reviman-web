@@ -420,6 +420,11 @@ section { padding: 96px 0; }
 /* Animación de aparición */
 .aparecer { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
 .aparecer.visible { opacity: 1; transform: none; }
+/* ---------- Vídeo promocional ---------- */
+.video-promo { padding-top: 32px; }
+.marco-video { max-width: 960px; margin: 0 auto; border-radius: var(--radio); overflow: hidden; box-shadow: var(--sombra); border: 1px solid var(--borde); background: #1E4FD8; aspect-ratio: 16 / 9; }
+.marco-video video { display: block; width: 100%; height: 100%; object-fit: cover; }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .aparecer { opacity: 1; transform: none; }
