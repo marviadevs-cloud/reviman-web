@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/estilos.css?v=20261121">
 </head>
 <body>
 <a class="saltar" href="#principal">Saltar al contenido</a>
@@ -123,9 +123,10 @@
       <span class="antetitulo">Míralo en medio minuto</span>
       <h2>Así es <span class="resalte">Reviman</span> por dentro</h2>
     </div>
-    <div class="marco-video aparecer">
+    <div class="marco-video aparecer" style="max-width:960px;margin:0 auto;overflow:hidden">
       <video id="videoPromo" src="video/reviman-promo-web.mp4" poster="video/reviman-promo-poster.jpg"
              autoplay muted loop playsinline preload="metadata"
+             width="1280" height="720" style="display:block;width:100%;height:auto"
              aria-label="Vídeo de presentación de Reviman: inicio, escaneo de tickets, diario, mantenimiento y gasolineras"></video>
     </div>
   </div>
@@ -610,7 +611,7 @@
   </div>
 </footer>
 
-<script src="js/config.js"></script>
-<script src="js/main.js"></script>
+<script src="js/config.js?v=20261121"></script>
+<script src="js/main.js?v=20261121"></script>
 </body>
 </html>
